@@ -3,6 +3,7 @@ function add(numbers) {
         return 0;
     }
     
+    numbers = numbers.replace(/\n/g, ',');
     const numArray = numbers.split(',');
     const sum = numArray.reduce((acc, num) => acc + parseInt(num, 10), 0);
     return sum;
